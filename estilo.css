@@ -1,0 +1,207 @@
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+    --gradient-one-from: hsl(0, 0%, 100%); /* Linear, 135deg */
+    --gradient-one-to: hsl(0, 100%, 98%);
+    --gradient-two-from: hsl(0, 80%, 86%); /* Linear, 135deg */
+    --gradient-two-to: hsl(0, 74%, 74%); 
+  }
+
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    overflow: hidden;
+  }
+  
+  .left {
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 68px 160px;
+  }
+
+  .logo {
+    height: 33px;
+    width: 158px;
+    margin-bottom: 130px;
+  }    
+  
+  .title-a {
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 300;
+    color: var(--desaturated-red);
+    margin: 0;
+    letter-spacing: 15px;
+  }
+
+  .title-b {
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--dark-grayish-red);
+    margin: 0;
+    letter-spacing: 15px;
+  }
+
+  .text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--desaturated-red);
+    box-sizing: border-box;
+    padding-right: 130px;
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+
+  .email {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px hsl(0, 80%, 86%);
+    border-radius: 25px ;
+    justify-content: space-between;
+    width: 410px;
+  }
+  
+  .data-field {
+    font-family: 'Josefin Sans', sans-serif;
+    background: transparent;
+    border: none;
+    margin-left: 30px;      
+  }
+
+  input {
+    outline: none;
+    width: 100%;
+    font-weight: 600;
+    color: var(--dark-grayish-red);
+  }
+
+  input::placeholder {
+    color: hsl(0, 80%, 86%);     
+  }
+
+  .button {
+    font-size: 35px;
+    font-weight: 300;
+    border-radius: 25px;
+    padding: 7px 35px;
+  }
+  
+  .highlight {
+    color: white;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  }
+
+  .highlight:hover {
+    cursor: pointer ;
+    color: white;
+  }
+  
+  .highlight:active {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+  }
+
+  .warning-none {
+    display: none;
+  }
+
+  .warning-visible {
+    color: hsl(0, 74%, 74%);
+    font-size: 14px;
+  }
+
+  .model {
+    height: 100%;
+  }
+
+  .modal-container {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    justify-content: center;
+  }
+
+  .modal-position {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    height: 180px;
+    width: 260px;
+    color: white;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+  .modal-header {
+    width: 100%;
+  }
+
+  .modal-content {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    text-align: right;
+    font-size: 20px;
+    padding-right: 15px;
+    padding-top: 10px;
+  }
+
+  span:hover {
+    cursor: pointer;
+    color: var(--soft-red)
+  }
+
+  .thanks {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark-grayish-red)
+  }
+
+  .modal-content {
+    margin-bottom: 20px;
+  }
+
+  .confirm-modal:hover {
+    cursor: pointer;
+    color: var(--soft-red)
+  }
+
+  .blur {
+    filter: blur(3px) brightness(60%);
+    animation-name: blur-fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes blur-fade {
+    0% {filter: blur(0px) brightness(100%)}
+    100% {filter: blur(3px) brightness(60%)}
+  }
