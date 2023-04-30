@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="estilo.css" rel="stylesheet">
-  
+  <link href="novoestilo.css" rel="stylesheet">
+    
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <img class="logo" alt="logo" src="./images/logo.svg" width="40px" height="40px"></img>
-      <div class="right-mobile">
-        <img class= "model-mobile" src="./images/hero-desktop.jpg" alt="modelo">
-      </div>
-      <div class="texts">
-        <p class="title-a">
-          We're
-        </p>
-        <p class="title-b">
-          coming soon
-        </p> 
-        <p class="text">
-          Hello fellow shoppers! We're currently building our new fashion store. 
-          Add you email below to stay up-to-date with announcements and our launch deals.
-        </p>
-        <div id="field" class="email">
-          <input class="data-field" type="email" placeholder="Email Address">
-          <a class="button highlight">></a>
-        </div> 
-        <p id="warning" class="warning-none">Please provide a valid email</p>    
-      </div>
-      </div>
-    <div class="right">
-      <img class= "model" src="./images/hero-desktop.jpg" alt="modelo">
-    </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal-container">
-    <div class="modal-position">
-      <div class="modal-header">
-        <span class="close-modal">x</span>
-        <p class="thanks">Thank you!</p>
-      </div>
-      <div class="modal-content">You have been subscribed successfully.</div>
-      <div class="modal-footer">
-          <a class="confirm-modal">Okay</a> <!-- Apenas como segunda opção para fechar -->
-      </div>
+    <div class="container">
+        <div class="left">
+            <img class="logo" alt="logotipo" src="./images/logo.svg" width="40px" height="40px"></img>
+            <div class="wallpaper-left"></div>
+            <!-- <img class= "model-mobile" alt="modelo" src="./images/hero-desktop.jpg" ></img> -->
+            <div class="texts">
+                <p class="title-top">We're</p>
+                <p class="title-bottom">coming soon</p> 
+                <p class="description">
+                  Hello fellow shoppers! We're currently building our new fashion store. 
+                  Add you email below to stay up-to-date with announcements and our launch deals.
+                </p>
+            </div>
+            <div class="field-container">
+                <div id="field" class="field">
+                    <input class="email-field" type="email" placeholder="Email Address">
+                    <a class="button highlight">></a>
+                </div> 
+            </div>
+            <div class="warning-container">
+                <p id="warning" class="warning-hidden">Please provide a valid email</p>    
+            </div>
+        </div>
+        <div class="right">
+            <div class="wallpaper-right"></div>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+
+    <!-- Modal -->
+    <div class="modal-container">   
+        <div class="modal-position">
+        <div class="modal-header">
+            <span class="close-modal">x</span>
+            <p class="thanks">Thank you!</p>
+        </div>
+        <div class="modal-content">You have been subscribed successfully.</div>
+        <div class="modal-footer">
+            <a class="confirm-modal">Okay</a> 
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
 </body>
 </html>
