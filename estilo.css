@@ -8,133 +8,95 @@
    --gradient-two-to: hsl(0, 74%, 74%);    /* Linear, 135deg */
 }
 
-html {
-   width: 100%;
-   height: 100%;
-}
-
+/* Mobile First */
 body {
-   font-family: 'Josefin Sans', sans-serif;
    height: 100vh;
    margin: 0;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 60px;
+   
 }
 
-.container {    /* Apenas para definir tamanhos */
+.container {  
+   width: 100%;
    display: absolute;
    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
    background-repeat: repeat;
 }
 
-.wallpaper-left {
-   height: 250px;
-   background-image: url('./images/hero-mobile.jpg');
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-.right {
-   display: none;
-}
-
 .logo {
-   height: 33px;
-   width: 158px;
-   margin: 40px 70px;
-}
+   margin: 40px 10%;
+}  
 
-.model-mobile {
-   width: 100%;
-   max-height: 65%;
-   object-fit: cover;
-   object-position: -25px -30px;
-}
-
-/* Textos */
-.texts {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding-top: 50px;
-   padding-bottom: 15px;
-   max-width: 100%;
+.wallpaper-left {
+   min-height: 250px;
+   background-image: url("./images/hero-mobile.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 
 .title-top {
+   text-align: center;
    text-transform: uppercase;
-   font-size: 3.75em;
+   font-size: 1em;
    font-weight: 300;
-   color: var(--desaturated-red);
-   margin: 0;
    letter-spacing: 15px;
+   color: var(--desaturated-red);
+   margin: 10% 0 0 0;
 }
 
 .title-bottom {
+   text-align: center;
    text-transform: uppercase;
-   font-size: 3.75em;
+   font-size: 1em;
    font-weight: 400;
+   letter-spacing: 15px;
    color: var(--dark-grayish-red);
    margin: 0;
-   letter-spacing: 15px;
-   /* margin: 0;
-   text-transform: uppercase;
-   font-size: 60px;
-   font-weight: 400;
-   color: var(--dark-grayish-red);
-   letter-spacing: 15px;
-   max-width: 52%; */
 }
 
 .description {
-   font-size: 1em;
+   text-align: center;
+   font-size: 0.25em;
    font-weight: 600;
    line-height: 24px;
    color: var(--desaturated-red);
-   padding: 0px 50px;
-   /* max-width: 28%; */
+   padding: 0 28%;
 }
 
-.title-top,
-.title-bottom,
-.description {
-   text-align: center;
-   /* padding: 0px; */
-   padding: 0px 50px;
-
-}
-
-/* Formulário e botão */
 .field-container {
    display: flex;
    justify-content: center;
+   width: 100%;
 }
 
 .field {
    display: flex;
    flex-direction: row;
    border: solid 1px hsl(0, 80%, 86%);
-   border-radius: 25px;
-   justify-content: center;
-   width: 410px;
-   max-width: 52%;
-   margin-bottom: 50px;
-}
-
-.email-field {
+   border-radius: 25px ;
+   justify-content: space-between;
+   width: 53%;
+   max-width: 410px;
+ }
+ 
+ .email-field {
    font-family: 'Josefin Sans', sans-serif;
    background: transparent;
    border: none;
-   margin-left: 30px;
-}
+   margin-left: 30px;      
+ }
+ 
 
 input {
-   outline: none;
-   width: 100%;
-   font-weight: 600;
-   color: var(--dark-grayish-red);
+  outline: none;
+  width: 100%;
+  font-weight: 600;
+  color: var(--dark-grayish-red);
 }
 
 input::placeholder {
-   color: hsl(0, 80%, 86%);
+  color: hsl(0, 80%, 86%);     
 }
 
 .button {
@@ -142,21 +104,21 @@ input::placeholder {
    font-weight: 300;
    border-radius: 25px;
    padding: 7px 35px;
-}
+ }
 
 .highlight {
-   color: white;
-   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-}
+  color: white;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+} 
 
 .highlight:hover {
-   cursor: pointer;
+   cursor: pointer ;
    color: white;
-}
-
-.highlight:active {
+ }
+ 
+ .highlight:active {
    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
-}
+ }
 
 .warning-container {
    display: flex;
@@ -170,7 +132,7 @@ input::placeholder {
 .warning-visible {
    color: hsl(0, 74%, 74%);
    font-size: 14px;
-}
+} 
 
 /* Modal */
 .modal-container {
@@ -221,7 +183,7 @@ input::placeholder {
 span {
    display: block;
    text-align: right;
-   font-size: 20px;
+   font-size: 0.33em;
    padding-right: 15px;
    padding-top: 10px;
 }
@@ -233,17 +195,29 @@ span:hover {
 
 .thanks {
    text-align: center;
-   font-size: 20px;
+   font-size: 0.33em;
    color: white;
 }
 
+.modal-footer {
+   display: flex;
+   justify-content: center;
+}
+
 .modal-content {
-   margin-bottom: 20px;
+   margin-bottom: 0.33em;
+   font-size: 0.33em;
+}
+
+.confirm-modal {
+   margin-top: 20px;
+   font-size: 0.33em;
+
 }
 
 .confirm-modal:hover {
    cursor: pointer;
-   color: var(--soft-red)
+   color: var(--soft-red);
 }
 
 .blur {
@@ -252,81 +226,28 @@ span:hover {
    animation-duration: 1s;
 }
 
-/* Media Queries */
-@media (min-width: 769px) {
 
-   .container {
-      height: 100%;
-      display: grid;
-      grid-template-columns: 59% 41%;
-      background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-      background-repeat: repeat;
-   }
 
-   .wallpaper-left {
-      display: none;
-   }
 
-   .left {
-      background-image: url('./images/bg-pattern-desktop.svg');
-      background-size: cover;
-   }
-
-   .right {
-      display: block;
-   }
-
-   .wallpaper-right {
-      height: 100%;
-      background-image: url('./images/hero-desktop.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-   }
-
+/* @media screen and (max-width: 768px) {
    .logo {
-      margin-left: 100px;
+      margin: 20px 5%;
    }
-
-   /* Textos Desktop */
-   .texts {
-      margin-left: 100px;
-      align-items: start;
+   
+   .wallpaper-left {
+      background-image: url("./images/hero-mobile.jpg");
    }
-
-   .title-bottom {
-      max-width: 100%;
-   }
-
-   .description {
-      box-sizing: border-box;
-      max-width: 280px;
-   }
-
-   .title-top,
-   .title-bottom,
-   .description {
-      text-align: left;
-      width: 100%;
-   }
-
-   /* Formulário e botão Desktop */
-   .field-container {
-      justify-content: left;
-      margin-right: 50px;
-   }
-
-   .field {
-      max-width: 100%;
-      margin-left: 100px;
-   }
-
-   .warning-container {
-      justify-content: left;
-      margin-left: 100px;
-   }
-
-   .warning-visible {
-      margin-left: 30px;
-   }
-
 }
+
+
+@media screen and (min-width: 769px) {
+   .logo {
+      margin: 60px 15%;
+   }
+   
+   .wallpaper-left {
+      background-image: url("./images/hero-desktop.jpg");
+      min-height: 25em;
+      max-height: 500px;
+   }
+} */
